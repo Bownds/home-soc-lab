@@ -4,72 +4,146 @@ This repository documents the design, build, and investigation exercises from my
 
 The goal of this lab is to simulate a small Security Operations Center (SOC) environment where attacks can be generated, detected, investigated, and documented.
 
-## Lab Objectives
+---
 
-• Build a virtual SOC environment using Proxmox  
-• Monitor network activity using Security Onion  
-• Simulate attacks using Kali Linux  
-• Investigate alerts using SIEM dashboards  
-• Write incident investigation reports  
+# Lab Objectives
 
-## Lab Hardware
+* Build a virtual SOC environment using Proxmox
+* Monitor network activity using Security Onion
+* Simulate attacks using Kali Linux
+* Investigate alerts using SIEM dashboards
+* Write incident investigation reports
 
-Primary Server  
-Dell Optiplex 990  
-i5-2400 CPU  
-12GB RAM  
-2TB storage  
-Proxmox VE hypervisor  
+---
 
-Additional Systems  
-Smilodin desktop (SOC dashboard display)  
-Dell Optiplex 790 (future firewall)  
-MacBook Pro (admin workstation)
+# Lab Hardware
 
-## Planned Lab Architecture
+### Primary Server
 
-Kali Linux (Attacker)
+* Dell Optiplex 990
+* Intel i5-2400
+* 12GB RAM
+* 2TB HDD
+* Proxmox VE hypervisor
 
-Ubuntu Server (Target)
+### Additional Systems
 
-Windows Workstation (Target)
+* Smilodin desktop (SOC dashboard display)
+* Dell Optiplex 790 (future firewall)
+* MacBook Pro (admin workstation)
 
-Security Onion (SIEM / IDS)
+---
 
-Firewall (planned)
+# Planned Lab Architecture
 
-## Lab Exercises
+* Kali Linux (Attacker)
+* Ubuntu Server (Target)
+* Windows Workstation (Target)
+* Security Onion (SIEM / IDS)
+* Firewall (planned)
 
-Network reconnaissance detection  
-SSH brute force investigation  
-Web attack simulation  
-Malware alert investigation  
-Lateral movement simulation
+---
 
-## Repository Structure
+# Lab Exercises
 
-architecture  
+* Network reconnaissance detection
+* SSH brute force investigation
+* Web attack simulation
+* Malware alert investigation
+* Lateral movement simulation
+
+---
+
+# Repository Structure
+
+architecture
 Lab diagrams and network design
 
-lab-build  
+lab-build
 Documentation for building the environment
 
-detection-labs  
+detection-labs
 Attack simulations and detection exercises
 
-incident-reports  
+incident-reports
 SOC investigation reports
 
-screenshots  
+screenshots
 Evidence collected during investigations
 
-## Lab Roadmap
+---
+
+# Lab Roadmap
 
 The following systems will be added to expand the SOC environment:
 
-- Kali Linux attacker machine
-- Security Onion SIEM platform
-- Windows Active Directory domain
-- Sysmon log collection
-- attack simulations
-- incident response exercises
+* Kali Linux attacker machine
+* Security Onion SIEM platform
+* Windows Active Directory domain
+* Sysmon log collection
+* attack simulations
+* incident response exercises
+
+---
+
+# Network Architecture
+
+```
+Internet
+   │
+Home Router (192.168.86.1)
+   │
+Google Mesh Network
+   │
+Ethernet
+   │
+Switch
+   │
+Proxmox Server (Optiplex 990)
+192.168.86.50
+   │
+vmbr0 Bridge
+   │
+Ubuntu Server VM
+192.168.86.247
+   │
+SSH
+   │
+MacBook Admin Machine
+```
+
+---
+
+# Infrastructure
+
+Router
+192.168.86.1
+
+Proxmox Hypervisor
+192.168.86.50
+
+Web UI
+https://192.168.86.50:8006
+
+Ubuntu Server VM
+192.168.86.247
+
+SSH Access
+ssh steve@192.168.86.247
+
+---
+
+# Current Environment
+
+### Deployed Systems
+
+* Proxmox VE hypervisor
+* Ubuntu Server 24.04 VM
+* SSH remote administration
+
+### Next Deployments
+
+* Kali Linux attacker machine
+* Security Onion SIEM
+* Windows workstation
+* centralized log collection

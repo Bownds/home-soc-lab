@@ -47,3 +47,39 @@ Proxmox bridge vmbr0
 ## Network Verification
 
 Command used
+
+
+ip a
+
+
+Result
+
+
+192.168.86.247/24
+
+
+---
+
+## SSH Access
+
+SSH connection verified from MacBook.
+
+
+ssh steve@192.168.86.247
+
+
+---
+
+## System Status
+
+Kernel  
+6.8.0-101-generic
+
+System Load  
+0.07
+
+Disk Usage  
+34%
+
+Memory Usage  
+6%

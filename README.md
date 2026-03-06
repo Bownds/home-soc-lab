@@ -1,11 +1,10 @@
-# Lab Architecture
+# Home SOC Lab
+
+## Lab Architecture
 
 <p align="center">
   <img src="architecture/lab-network-diagram.png" width="400">
 </p>
-
-# Home SOC Lab
-
 This repository documents the design, build, and investigation exercises from my cybersecurity home lab.
 
 The goal of this lab is to simulate a small Security Operations Center (SOC) environment where attacks can be generated, detected, investigated, and documented.

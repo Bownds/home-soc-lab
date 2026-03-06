@@ -62,3 +62,14 @@ SOC investigation reports
 
 screenshots  
 Evidence collected during investigations
+
+## Lab Roadmap
+
+The following systems will be added to expand the SOC environment:
+
+- Kali Linux attacker machine
+- Security Onion SIEM platform
+- Windows Active Directory domain
+- Sysmon log collection
+- attack simulations
+- incident response exercises

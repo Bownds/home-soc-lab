@@ -87,34 +87,6 @@ The goal of this lab is to simulate a small **Security Operations Center (SOC)**
 
 ---
 
-## Network Architecture
-
-```text
-Internet
-   │
-Optimum Router (192.168.1.1)
-   │
-Google Mesh Router (192.168.86.1)
-   │
-Ethernet
-   │
-Gigabit Switch
-   │
-Proxmox Server (Optiplex 990)
-   192.168.86.248
-   │
-vmbr0 Bridge
-   │
-Ubuntu Server VM
-   192.168.86.247
-   │
-SSH
-   │
-MacBook Admin Machine
-```
-
----
-
 ## Infrastructure
 
 Router  

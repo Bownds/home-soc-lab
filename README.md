@@ -1,6 +1,8 @@
 # Lab Architecture
 
-![SOC Lab Architecture](architecture/lab-network-diagram.png)
+<p align="center">
+  <img src="architecture/lab-network-diagram.png" width="600">
+</p>
 
 # Home SOC Lab
 

@@ -1,7 +1,7 @@
 # Lab Architecture
 
 <p align="center">
-  <img src="architecture/lab-network-diagram.png" width="600">
+  <img src="architecture/lab-network-diagram.png" width="300">
 </p>
 
 # Home SOC Lab

@@ -1,17 +1,25 @@
 # Home SOC Lab
 
+![Proxmox](https://img.shields.io/badge/Virtualization-Proxmox-blue)
+![Security Onion](https://img.shields.io/badge/SIEM-Security%20Onion-green)
+![Kali Linux](https://img.shields.io/badge/Attacker-Kali%20Linux-red)
+![Ubuntu](https://img.shields.io/badge/Target-Ubuntu-orange)
+
+---
+
 ## Lab Architecture
 
 <p align="center">
   <img src="architecture/lab-network-diagram.png" width="400">
 </p>
-This repository documents the design, build, and investigation exercises from my cybersecurity home lab.
 
-The goal of this lab is to simulate a small Security Operations Center (SOC) environment where attacks can be generated, detected, investigated, and documented.
+This repository documents the design, build, and investigation exercises from my personal cybersecurity home lab.
+
+The goal of this lab is to simulate a small **Security Operations Center (SOC)** environment where attacks can be generated, detected, investigated, and documented using real security tools.
 
 ---
 
-# Lab Objectives
+## Lab Objectives
 
 * Build a virtual SOC environment using Proxmox
 * Monitor network activity using Security Onion
@@ -21,14 +29,14 @@ The goal of this lab is to simulate a small Security Operations Center (SOC) env
 
 ---
 
-# Current Lab Status
+## Current Lab Status
 
 ✔ Proxmox VE hypervisor deployed  
 ✔ Static network configuration completed  
 ✔ Ubuntu Server VM deployed  
 ✔ SSH remote administration configured  
 
-Next systems to deploy:
+### Next Systems to Deploy
 
 * Kali Linux attacker machine
 * Security Onion SIEM platform
@@ -37,7 +45,7 @@ Next systems to deploy:
 
 ---
 
-# Skills Demonstrated
+## Skills Demonstrated
 
 * Proxmox virtualization
 * Linux server administration
@@ -51,7 +59,7 @@ Next systems to deploy:
 
 ---
 
-# Lab Hardware
+## Lab Hardware
 
 ### Primary Server
 
@@ -69,7 +77,7 @@ Next systems to deploy:
 
 ---
 
-# Planned Lab Architecture
+## Planned Lab Architecture
 
 * Kali Linux (Attacker)
 * Ubuntu Server (Target)
@@ -79,7 +87,58 @@ Next systems to deploy:
 
 ---
 
-# Lab Exercises
+## Network Architecture
+
+```text
+Internet
+   │
+Optimum Router (192.168.1.1)
+   │
+Google Mesh Router (192.168.86.1)
+   │
+Ethernet
+   │
+Gigabit Switch
+   │
+Proxmox Server (Optiplex 990)
+   192.168.86.248
+   │
+vmbr0 Bridge
+   │
+Ubuntu Server VM
+   192.168.86.247
+   │
+SSH
+   │
+MacBook Admin Machine
+```
+
+---
+
+## Infrastructure
+
+Router  
+192.168.86.1
+
+Proxmox Hypervisor  
+192.168.86.248
+
+Web Interface  
+https://192.168.86.248:8006
+
+Ubuntu Server VM  
+192.168.86.247
+
+SSH Access  
+```
+ssh steve@192.168.86.247
+```
+
+---
+
+## Lab Exercises
+
+Planned security investigation exercises include:
 
 * Network reconnaissance detection
 * SSH brute force investigation
@@ -89,26 +148,28 @@ Next systems to deploy:
 
 ---
 
-# Repository Structure
+## Repository Structure
 
-architecture  
-Lab diagrams and network design  
+```
+architecture
+  Lab diagrams and network design
 
-lab-build  
-Documentation for building the environment  
+lab-build
+  Documentation for building the environment
 
-detection-labs  
-Attack simulations and detection exercises  
+detection-labs
+  Attack simulations and detection exercises
 
-incident-reports  
-SOC investigation reports  
+incident-reports
+  SOC investigation reports
 
-screenshots  
-Evidence collected during investigations  
+screenshots
+  Evidence collected during investigations
+```
 
 ---
 
-# Lab Roadmap
+## Lab Roadmap
 
 The following systems will be added to expand the SOC environment:
 
@@ -121,76 +182,14 @@ The following systems will be added to expand the SOC environment:
 
 ---
 
-# Network Architecture
+## SOC Investigation Reports
 
+Incident investigation reports generated during attack simulations will be documented in the **incident-reports** directory.
 
-Internet
-│
-Optimum Router (192.168.1.1)
-│
-Google Mesh Router (192.168.86.1)
-│
-Ethernet
-│
-Gigabit Switch
-│
-Proxmox Server (Optiplex 990)
-192.168.86.248
-│
-vmbr0 Bridge
-│
-Ubuntu Server VM
-192.168.86.247
-│
-SSH
-│
-MacBook Admin Machine
-
-
----
-
-# Infrastructure
-
-Router  
-192.168.86.1
-
-Proxmox Hypervisor  
-192.168.86.248
-
-Web UI  
-https://192.168.86.248:8006
-
-Ubuntu Server VM  
-192.168.86.247
-
-SSH Access  
-ssh steve@192.168.86.247
-
----
-
-# Current Environment
-
-### Deployed Systems
-
-* Proxmox VE hypervisor
-* Ubuntu Server 24.04 VM
-* SSH remote administration
-
-### Next Deployments
-
-* Kali Linux attacker machine
-* Security Onion SIEM
-* Windows workstation
-* Centralized log collection
-
----
-
-# SOC Investigation Reports
-
-Incident investigation reports generated during attack simulations will be documented in the **incident-reports** directory. These reports will include:
+Reports will include:
 
 * Attack description
 * Detection method
 * Log analysis
-* Indicators of compromise
+* Indicators of compromise (IOCs)
 * Response actions

@@ -1,3 +1,7 @@
+# Lab Architecture
+
+![SOC Lab Architecture](architecture/lab-network-diagram.png)
+
 # Home SOC Lab
 
 This repository documents the design, build, and investigation exercises from my cybersecurity home lab.

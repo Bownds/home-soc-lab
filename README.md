@@ -35,13 +35,18 @@ The goal of this lab is to simulate a small **Security Operations Center (SOC)**
 ✔ Static network configuration completed  
 ✔ Ubuntu Server VM deployed  
 ✔ SSH remote administration configured  
+✔ Apache web server deployed on target server  
+✔ Weak credential user created for brute-force testing  
+✔ Kali Linux attacker VM deployed 
 
 ### Next Systems to Deploy
 
-* Kali Linux attacker machine
+### Next Systems to Deploy
+
 * Security Onion SIEM platform
 * Windows workstation target
 * Centralized log collection
+* Attack simulation scenarios
 
 ---
 
@@ -54,6 +59,8 @@ The goal of this lab is to simulate a small **Security Operations Center (SOC)**
 * Home network architecture
 * DHCP troubleshooting
 * Remote server administration (SSH)
+* Apache web server deployment
+* Attack surface preparation
 * Infrastructure documentation
 * Network device identification via MAC address
 
@@ -79,8 +86,8 @@ The goal of this lab is to simulate a small **Security Operations Center (SOC)**
 
 ## Planned Lab Architecture
 
-* Kali Linux (Attacker)
-* Ubuntu Server (Target)
+* Kali Linux (Attacker VM)
+* Ubuntu Server (Target VM)
 * Windows Workstation (Target)
 * Security Onion (SIEM / IDS)
 * Firewall (planned)

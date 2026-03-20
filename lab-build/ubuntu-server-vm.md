@@ -2,84 +2,43 @@
 
 ## Objective
 
-Deploy a Linux server inside Proxmox to act as the first system in the SOC lab environment.
+Deploy a Linux server inside Proxmox to act as a monitored endpoint in the SOC lab environment.
 
 ---
 
 ## Environment
 
-Hypervisor  
+### Hypervisor
 Proxmox VE
 
-Host Machine  
-Dell Optiplex 990
-
-CPU  
-Intel i5-2400
-
-RAM  
-12GB
-
-Storage  
-2TB HDD
+### Host Machine
+Dell Optiplex 990  
+Intel i5-2400 · 16 GB RAM · 2 TB HDD  
 
 ---
 
 ## Virtual Machine Configuration
 
-Operating System  
-Ubuntu Server 24.04.4 LTS
+### Operating System
+Ubuntu Server 24.04 LTS
 
-CPU  
+### CPU
 2 cores
 
-Memory  
-4GB
+### Memory
+4 GB
 
-Disk  
-20GB
+### Disk
+20 GB
 
-Network  
-Proxmox bridge vmbr0
-
----
-
-## Network Verification
-
-Command used
-
-
-ip a
-
-
-Result
-
-
-192.168.86.247/24
-
+### Network
+Proxmox bridge (vmbr0)
 
 ---
 
-## SSH Access
+## Network Configuration
 
-SSH connection verified from MacBook.
+### IP Address
+192.168.86.35
 
-
-ssh steve@192.168.86.247
-
-
----
-
-## System Status
-
-Kernel  
-6.8.0-101-generic
-
-System Load  
-0.07
-
-Disk Usage  
-34%
-
-Memory Usage  
-6%
+### Verification Command

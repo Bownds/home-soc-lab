@@ -74,3 +74,89 @@ The goal of this lab is to simulate a small **Security Operations Center (SOC)**
 A brute force attack was simulated from the Kali attacker machine targeting the Ubuntu server's SSH service.
 
 ### Command Used
+
+
+hydra -l fakeuser -P /usr/share/wordlists/rockyou.txt ssh://192.168.86.35
+
+
+### Outcome
+
+* Over 1,100 failed login attempts generated  
+* Wazuh successfully detected repeated authentication failures  
+* Alerts mapped to MITRE ATT&CK technique T1110  
+
+---
+
+## Detection and Analysis
+
+Wazuh detected:
+
+* Repeated SSH authentication failures  
+* Invalid user login attempts  
+* High-frequency attack behavior  
+* Source IP correlation to attacker system  
+
+This demonstrates successful detection of brute force activity in a monitored environment.
+
+---
+
+## SOC Investigation Reports
+
+Incident reports are located in the **incident-reports** directory.
+
+### Completed Reports
+
+* SSH Brute Force Attack Detection  
+  → `incident-reports/ssh-brute-force.md`
+
+---
+
+## Repository Structure
+
+
+architecture
+Lab diagrams and network design
+incident-reports
+SOC investigation reports
+screenshots
+Evidence collected during investigations
+
+
+---
+
+## Lab Hardware
+
+### Primary Server
+
+* Dell Optiplex 990  
+* Intel i5-2400  
+* 16GB RAM  
+* 2TB HDD  
+* Proxmox VE  
+
+---
+
+## Lab Roadmap
+
+Planned future expansions:
+
+* Windows endpoint monitoring
+* Centralized log enrichment
+* Custom detection rules
+* Alert tuning and thresholds
+* Web attack simulation
+* Lateral movement scenarios
+* Threat intelligence integration
+
+---
+
+## Summary
+
+This lab demonstrates a complete SOC workflow:
+
+* Attack simulation (Kali Linux)
+* Detection (Wazuh SIEM)
+* Investigation (log analysis)
+* Documentation (incident reporting)
+
+It is designed to replicate real-world security monitoring and analysis practices in a controlled environment.

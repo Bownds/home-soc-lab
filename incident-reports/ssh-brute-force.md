@@ -86,3 +86,20 @@ Monitor and alert on repeated authentication failures
 Conclusion
 
 The lab successfully demonstrated detection of a brute force attack using Wazuh SIEM. This validates that the monitoring pipeline is functioning and capable of identifying suspicious authentication activity.
+
+## Screenshots
+
+### Lab Environment (Proxmox)
+![Lab Overview](../screenshots/lab-overview.png)
+
+### SSH Brute Force Detection in Wazuh
+Shows repeated failed login attempts detected by Wazuh.
+![Wazuh SSH Detection](../screenshots/wazuh-ssh-detection.png)
+
+### Event Details (Source IP and Rule Analysis)
+Shows attacker IP (192.168.86.39), rule ID, and log details.
+![Event Details](../screenshots/wazuh-event-details.png)
+
+### Hydra Attack Simulation from Kali
+Shows active brute force attack targeting SSH.
+![Hydra Attack](../screenshots/hydra-attack.png)

@@ -354,3 +354,4 @@ This lab demonstrates a complete SOC workflow:
 * **Documentation** — Incident reporting and lab journaling
 
 Designed to replicate real-world security monitoring and analysis in a controlled environment.
+
